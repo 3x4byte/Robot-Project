@@ -62,9 +62,9 @@ public class RobotMqttClient {
 		client.subscribe("robots/collector", 1);
 		
 		while(true) {// !Button.ENTER.isDown()
-			if(Button.UP.isDown()) {
-				sendFinishedMessage();
-			}
+			try {
+				Thread.sleep(10);
+			} catch (InterruptedException e) {}
 		}
 		
 		
